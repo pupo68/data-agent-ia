@@ -1,0 +1,48 @@
+# Arquivo .gitignore para o Projeto Agente Analista de Dados
+
+# 1. Ambientes Virtuais do Python
+# Nunca envie a pasta do ambiente virtual para o repositório.
+# Ela contém bibliotecas que podem ser reinstaladas com o requirements.txt.
+.venv/
+venv/
+env/
+/agno_env/
+
+# 2. Arquivos de Segredos e Configuração de Ambiente
+# ESSENCIAL: Nunca envie suas chaves de API ou segredos.
+.env
+*.env
+
+# 3. Cache e Arquivos Compilados do Python
+# Esses arquivos são gerados automaticamente pelo Python e não são necessários.
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# 4. Saídas Geradas pelo Projeto
+# Não queremos versionar os gráficos, apenas o código que os cria.
+# Também ignoramos o banco de dados de histórico de chat que o agno pode criar.
+/graficos_gerados/
+*.db
+*.sqlite3
+
+# 5. Arquivos de Configuração de IDEs e Editores
+# Ignora arquivos de configuração de editores de código populares.
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# 6. Arquivos de Sistema Operacional
+# Ignora arquivos gerados automaticamente pelo macOS, Windows e Linux.
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 7. Arquivos de Relatório de Testes e Cobertura
+# Útil se você decidir adicionar testes ao seu projeto no futuro.
+.pytest_cache/
+.coverage
+htmlcov/
+*.egg-info/
